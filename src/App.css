@@ -1,3 +1,6 @@
+*{
+  text-decoration: none !important;
+}
 .navbar {
   border-bottom: 3px solid rgb(4, 195, 209);
   background-color: #CBCBCB !important;

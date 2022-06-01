@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavBar } from "../src/layouts/NavBar";
 import Bandeja from "./components/Bandeja";
 import Servicios from "./components/Servicios";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/Servicios" element={<Servicios />} />
         <Route path="/Bandeja" element={<Bandeja />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
