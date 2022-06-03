@@ -107,13 +107,35 @@ const RenovarS = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Número</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -183,11 +205,33 @@ const RenovarS = () => {
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal de diseño (L/s)</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal de tratado (L/s)</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-4">
@@ -373,10 +417,32 @@ const RenovarS = () => {
               <p>Número de usuarios</p>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-2">
@@ -384,10 +450,32 @@ const RenovarS = () => {
               <p>Población beneficiada</p>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row">

@@ -102,13 +102,35 @@ const PrimeraU = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Número</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[0-9]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -153,23 +175,65 @@ const PrimeraU = () => {
             </div>
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Nombre de la fuente*</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-3">
             <div className="col-lg-3 col-md-3 col-sm-12">
               <p>Localización de la bocatoma*</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12">
-              {" "}
               <br />
-              <input type="text" className="form-control mt-3" />
+              <input
+                type="text"
+                className="form-control mt-3"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              {" "}
               <br />
-              <input type="text" className="form-control mt-3" />
+              <input
+                type="text"
+                className="form-control mt-3"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-8 col-md-8 col-sm-12 mt-3">
               <p>Descripción de la fuente*</p>
@@ -225,11 +289,33 @@ const PrimeraU = () => {
             <div className="col-lg-4 col-md-4 col-sm-12">
               <br />
               <p>Coordenadas de capacitación</p>
-              <input type="text" className="form-control mt-3" />
+              <input
+                type="text"
+                className="form-control mt-3"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mt-4">
               <br />
-              <input type="text" className="form-control mt-3" />
+              <input
+                type="text"
+                className="form-control mt-3"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-2">
@@ -241,16 +327,37 @@ const PrimeraU = () => {
               </select>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12">
-              {" "}
               <br />
               <p>Descripción de otro uso</p>
-              <input type="text" className="form-control mt-3" />
+              <input
+                type="text"
+                className="form-control mt-3"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-3">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal total</p>
-              <input type="text" className="form-control mt-3" />
+              <input
+                type="text"
+                className="form-control mt-3"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-4">

@@ -52,7 +52,7 @@ const Servicios = () => {
             <div className="ubi-menu" style={{ marginLeft: "-12px" }}>
               <nav className="nav panel">
                 <a className="nav-link active" href="#">
-                  1. Solicitar revisión{" "}
+                  1. Solicitar revisión
                 </a>
                 <a className="nav-link" href="#">
                   2. Crear Solicitud
@@ -92,13 +92,35 @@ const Servicios = () => {
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Número de radicado</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Tipo de trámite</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
         </div>
@@ -138,50 +160,138 @@ const Servicios = () => {
           <div className="col-lg-4 col-sm-4 col-md-4 mt-4 ml-2">
             <div className="panel-search">
               <p>Número de documento</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
 
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Primer nombre</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
             <div className="panel-search">
               <p>Segundo nombre</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Primer apellido </p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Segundo apellido</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Teléfono de contacto 1 </p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Teléfono de contacto 2</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
             <div className="panel-search">
               <p>Correo electrónico </p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
         </div>
@@ -255,20 +365,20 @@ const Servicios = () => {
 
           <div className="col-lg-8 col-md-8 col-sm-12 mt-4">
             <button
-              className="ml-4 float-right button btn btn-default" 
-              style={{backgroundColor:'#CBCBCB'}}
+              className="ml-4 float-right button btn btn-default"
+              style={{ backgroundColor: "#CBCBCB" }}
             >
               Enviar
             </button>
             <button
               className="float-right button btn btn-default"
-              style={{backgroundColor:'#CBCBCB'}}
+              style={{ backgroundColor: "#CBCBCB" }}
             >
               Guardar
             </button>
             <button
               className="mr-3 float-right button btn btn-default"
-              style={{backgroundColor:'#CBCBCB'}}
+              style={{ backgroundColor: "#CBCBCB" }}
             >
               Cancelar
             </button>

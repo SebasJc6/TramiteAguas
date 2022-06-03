@@ -135,7 +135,18 @@ const Bandeja = () => {
                         </select>
                       </div>
                       <div className="col-md-6 col-lg-6 col-sm-12">
-                        <input type="text" className="form-control" />
+                        <input
+                          type="text"
+                          className="form-control"
+                          onKeyPress={(event) => {
+                            if (!/[a-zA-Z]/.test(event.key)) {
+                              event.preventDefault();
+                            }
+                          }}
+                          onPaste={(event) => {
+                            event.preventDefault();
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
@@ -149,7 +160,6 @@ const Bandeja = () => {
                         backgroundColor: "#ede9e3",
                       }}
                     >
-                      {" "}
                       <thead>
                         <tr
                           style={{
@@ -194,7 +204,18 @@ const Bandeja = () => {
                         </select>
                       </div>
                       <div className="col-md-6 col-lg-6 col-sm-12">
-                        <input type="text" className="form-control" />
+                        <input
+                          type="text"
+                          className="form-control"
+                          onKeyPress={(event) => {
+                            if (!/[a-zA-Z]/.test(event.key)) {
+                              event.preventDefault();
+                            }
+                          }}
+                          onPaste={(event) => {
+                            event.preventDefault();
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
@@ -208,7 +229,6 @@ const Bandeja = () => {
                         backgroundColor: "#ede9e3",
                       }}
                     >
-                      {" "}
                       <thead>
                         <tr
                           style={{

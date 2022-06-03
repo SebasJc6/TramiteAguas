@@ -102,13 +102,35 @@ const Notificar = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Número</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -140,13 +162,35 @@ const Notificar = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Caudal diseño (L/S)</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Caudal tratado (L/S)</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -186,11 +230,33 @@ const Notificar = () => {
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal de diseño (L/s)</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal de tratado (L/s)</p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-4">
@@ -372,7 +438,20 @@ const Notificar = () => {
             </div>
             <div className="col-lg-8 col-sm-12 col-md-8 mt-3">
               <p>Descripción de otro componente del sistema de tratamiento</p>
-              <input type="text" name="" id="" className="form-control" />
+              <input
+                type="text"
+                name=""
+                id=""
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-3">
@@ -380,10 +459,32 @@ const Notificar = () => {
               <p>Número de usuarios</p>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row mt-2">
@@ -391,10 +492,32 @@ const Notificar = () => {
               <p>Población beneficiada</p>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
           </div>
           <div className="row">
@@ -528,7 +651,18 @@ const Notificar = () => {
           <div className="row">
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Estado de la revisión </p>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                onKeyPress={(event) => {
+                  if (!/[a-zA-Z]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
+                onPaste={(event) => {
+                  event.preventDefault();
+                }}
+              />
             </div>
             <div className="col-lg-4 col-sm-12 col-md-4 text-center mt-5">
               <p>Documento pdf</p>

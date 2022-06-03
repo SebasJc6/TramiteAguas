@@ -102,20 +102,53 @@ const RevisarSg = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Número</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[0-9]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
 
                 <p className="mt-3">Estado</p>
                 <select name="" id="" className="form-control">
                   <option value="">En revisión</option>
                 </select>
                 <p className="mt-3">Actividad siguiente</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
 
                 <p className="mt-3">Actividad actual</p>
                 <select name="" id="" className="form-control">
@@ -205,7 +238,18 @@ const RevisarSg = () => {
                               <option value="">Superficial</option>
                             </select>
                             <p className="mt-2">Descripción de otra fuente</p>
-                            <input type="text" className="form-control" />
+                            <input
+                              type="text"
+                              className="form-control"
+                              onKeyPress={(event) => {
+                                if (!/[a-zA-Z]/.test(event.key)) {
+                                  event.preventDefault();
+                                }
+                              }}
+                              onPaste={(event) => {
+                                event.preventDefault();
+                              }}
+                            />
                           </div>
                           <div className="col-md-6 col-lg-6 col-sm-12">
                             <p className="mt-3">Subcategoria de fuente*</p>
@@ -221,13 +265,46 @@ const RevisarSg = () => {
                             <p className="mt-3">localización</p>
                           </div>
                           <div className="col-md-4 col-lg-4 col-sm-12">
-                            <input type="text" className="form-control" />
+                            <input
+                              type="text"
+                              className="form-control"
+                              onKeyPress={(event) => {
+                                if (!/[a-zA-Z]/.test(event.key)) {
+                                  event.preventDefault();
+                                }
+                              }}
+                              onPaste={(event) => {
+                                event.preventDefault();
+                              }}
+                            />
                           </div>
                           <div className="col-md-4 col-lg-4 col-sm-12">
-                            <input type="text" className="form-control" />
+                            <input
+                              type="text"
+                              className="form-control"
+                              onKeyPress={(event) => {
+                                if (!/[a-zA-Z]/.test(event.key)) {
+                                  event.preventDefault();
+                                }
+                              }}
+                              onPaste={(event) => {
+                                event.preventDefault();
+                              }}
+                            />
                           </div>
                           <div className="col-md-4 col-lg-4 col-sm-12">
-                            <input type="text" className="form-control" />
+                            <input
+                              type="text"
+                              className="form-control"
+                              onKeyPress={(event) => {
+                                if (!/[a-zA-Z]/.test(event.key)) {
+                                  event.preventDefault();
+                                }
+                              }}
+                              onPaste={(event) => {
+                                event.preventDefault();
+                              }}
+                            />
                           </div>
                         </div>
                         <div className="row">
