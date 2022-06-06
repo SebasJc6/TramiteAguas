@@ -62,7 +62,7 @@ const PrimeraU = () => {
               <div className="ubi-menu" style={{ marginLeft: "-12px" }}>
                 <nav className="nav panel">
                   <a className="nav-link active" href="#">
-                    1. Solicitar revisión{" "}
+                    1. Solicitar revisión
                   </a>
                   <a className="nav-link" href="#">
                     2. Crear Solicitud
@@ -101,36 +101,40 @@ const PrimeraU = () => {
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
-                <p>Número</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <p>Número de radicado</p>
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -148,106 +152,161 @@ const PrimeraU = () => {
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
-                <select name="" id="" className="form-control">
-                  <option value="">Primera Vez</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>Primera vez</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className="row mt-5">
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Tipo de fuente*</p>
-              <select name="" id="" className="form-control">
-                <option value="">Superficial</option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option>Superficial</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Subcategoria de fuente*</p>
-              <select name="" id="" className="form-control">
-                <option value="">Caño</option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option>Caño</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div className="row mt-2">
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Descripción de otra fuente</p>
-              <input type="text" className="form-control" />
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Nombre de la fuente*</p>
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-3">
             <div className="col-lg-3 col-md-3 col-sm-12">
               <p>Localización de la bocatoma*</p>
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12">
               <br />
-              <input
-                type="text"
-                className="form-control mt-3"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
               <br />
-              <input
-                type="text"
-                className="form-control mt-3"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-8 col-md-8 col-sm-12 mt-3">
               <p>Descripción de la fuente*</p>
-              <textarea
-                className="form-control"
-                id="exampleFormControlTextarea1"
-                rows={5}
-              ></textarea>
+              <div className="form-group gov-co-form-group">
+                <textarea
+                  className="form-control ml-2"
+                  id="exampleFormControlTextarea1"
+                  rows={5}
+                ></textarea>
+              </div>
             </div>
             <div className="col-lg-6 col-sm-12 col-md-6 mt-3">
               <p>Autoridad ambiental que otorga la concesión</p>
-              <select name="" id="" className="form-control">
-                <option value="">SDA- Secretaría distrital de ambiente </option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option>SDA- Secretaría distrital de ambiente</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div className="row mt-3">
@@ -266,98 +325,149 @@ const PrimeraU = () => {
           <div className="row mt-3">
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Departamento*</p>
-              <select name="" id="" className="form-control">
-                <option value="">Bogotá</option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option>Bogotá</option>
+                  </select>
+                </div>
+              </div>
               <p className="mt-3">Localidad o vereda*</p>
-              <select name="" id="" className="form-control">
-                <option value="">Señleccione</option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option>Seleccione</option>
+                  </select>
+                </div>
+              </div>
             </div>
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Municipio*</p>
-              <select name="" id="" className="form-control">
-                <option value="">Bogotá</option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option> Bogotá</option>
+                  </select>
+                </div>
+              </div>
               <p className="mt-3">Sector*</p>
-              <select name="" id="" className="form-control">
-                <option value="">Señleccione</option>
-              </select>
+              <div className="form-group gov-co-form-group ml-2">
+                <div className="gov-co-dropdown">
+                  <select
+                    id="selector-simple"
+                    className="selectpicker form-control"
+                    title="Escoger"
+                  >
+                    <option>Seleccione</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <br />
               <p>Coordenadas de capacitación</p>
-              <input
-                type="text"
-                className="form-control mt-3"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 mt-4">
               <br />
-              <input
-                type="text"
-                className="form-control mt-3"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-2">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <br />
               <p>Usuo de la fuente</p>
-              <select name="" id="" className="form-control">
-                <option value="">Seleccione</option>
-              </select>
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[0-9]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12">
               <br />
               <p>Descripción de otro uso</p>
-              <input
-                type="text"
-                className="form-control mt-3"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-3">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal total</p>
-              <input
-                type="text"
-                className="form-control mt-3"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-4">

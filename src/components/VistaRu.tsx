@@ -102,85 +102,123 @@ const VistaRu = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Número de radicado</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Tipo de tramite</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Estado</p>
-                <select name="" id="" className="form-control">
-                  <option value="">En radicación</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>En radicación</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Actividad actual</p>
-                <select name="" id="" className="form-control">
-                  <option value="">Solicitud de revisión en campo</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>Solicitud de revisión en campo</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Actividad siguiente </p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Usuario asignado</p>
-                <select name="" id="" className="form-control">
-                  <option value="">CGONZALEZL</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>CGONZALEZL</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Subred de jurisdicción </p>
-                <select name="" id="" className="form-control">
-                  <option value="">Seleccione</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>Seleccione</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -203,9 +241,17 @@ const VistaRu = () => {
               >
                 <div className="panel-search">
                   <p>Tipo de solicitante*</p>
-                  <select name="" id="" className="form-control">
-                    <option value="">Personal natural</option>
-                  </select>
+                  <div className="form-group gov-co-form-group ml-2">
+                    <div className="gov-co-dropdown">
+                      <select
+                        id="selector-simple"
+                        className="selectpicker form-control"
+                        title="Escoger"
+                      >
+                        <option>Persona Natural</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -213,146 +259,170 @@ const VistaRu = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-4 ml-2">
               <div className="panel-search">
                 <p>Tipo de documento</p>
-                <select name="" id="" className="form-control">
-                  <option value="">item</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>Item</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-4 ml-2">
               <div className="panel-search">
                 <p>Número de documento</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Primer nombre</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Segundo nombre</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Primer apellido </p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Segundo apellido</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Teléfono de contacto 1 </p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Teléfono de contacto 2</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Correo electrónico </p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -373,18 +443,20 @@ const VistaRu = () => {
                   style={{ marginLeft: "5px" }}
                 >
                   <p>Dirección de domicilio</p>
-                  <input
-                    type="text"
-                    className="form-control"
-                    onKeyPress={(event) => {
-                      if (!/[a-zA-Z]/.test(event.key)) {
+                  <div className="form-group gov-co-form-group">
+                    <input
+                      type="text"
+                      className="form-control gov-co-form-control"
+                      onKeyPress={(event) => {
+                        if (!/[a-zA-Z]/.test(event.key)) {
+                          event.preventDefault();
+                        }
+                      }}
+                      onPaste={(event) => {
                         event.preventDefault();
-                      }
-                    }}
-                    onPaste={(event) => {
-                      event.preventDefault();
-                    }}
-                  />
+                      }}
+                    />
+                  </div>
                 </div>
                 <div
                   className="col-lg-2 col-sm-12 col-md-12"
@@ -403,80 +475,90 @@ const VistaRu = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Departamento</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Municipio</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Vereda </p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Sector</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
           <div className="row mt-3 ">
             <div className="col-lg-8 col-sm-12 col-md-8">
               <p className="ml-2">Observaciones adicionales</p>
-              <textarea
-                className="form-control ml-2"
-                id="exampleFormControlTextarea1"
-                rows={5}
-              ></textarea>
+              <div className="form-group gov-co-form-group">
+                <textarea
+                  className="form-control ml-2"
+                  id="exampleFormControlTextarea1"
+                  rows={5}
+                ></textarea>
+              </div>
             </div>
 
             <div className="col-lg-12 col-sm-12 col-md-12 mt-4">
@@ -500,9 +582,17 @@ const VistaRu = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Formulario</p>
-                <select name="" id="" className="form-control">
-                  <option value="">CGONZALEZ</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>CGONZALEZL</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-8 col-sm-12 col-md-8 mt-3">
@@ -516,19 +606,19 @@ const VistaRu = () => {
             <div className="col-lg-8 col-md-8 col-sm-12 mt-4">
               <button
                 className="ml-4 float-right button btn btn-default"
-                style={{ backgroundColor: "#CBCBCB" }}
+                style={{ backgroundColor: "#BABABA" }}
               >
                 Enviar
               </button>
               <button
                 className="float-right button btn btn-default"
-                style={{ backgroundColor: "#CBCBCB" }}
+                style={{ backgroundColor: "#BABABA" }}
               >
                 Guardar
               </button>
               <button
                 className="mr-3 float-right button btn btn-default"
-                style={{ backgroundColor: "#CBCBCB" }}
+                style={{ backgroundColor: "#BABABA" }}
               >
                 Cancelar
               </button>

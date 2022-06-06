@@ -62,7 +62,7 @@ const RevisarSg = () => {
               <div className="ubi-menu" style={{ marginLeft: "-12px" }}>
                 <nav className="nav panel">
                   <a className="nav-link active" href="#">
-                    1. Solicitar revisión{" "}
+                    1. Solicitar revisión
                   </a>
                   <a className="nav-link" href="#">
                     2. Crear Solicitud
@@ -101,63 +101,94 @@ const RevisarSg = () => {
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
-                <p>Número</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <p>Número de radicado</p>
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
 
                 <p className="mt-3">Estado</p>
-                <select name="" id="" className="form-control">
-                  <option value="">En revisión</option>
-                </select>
+
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>En revisión</option>
+                    </select>
+                  </div>
+                </div>
                 <p className="mt-3">Actividad siguiente</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
 
                 <p className="mt-3">Actividad actual</p>
-                <select name="" id="" className="form-control">
-                  <option value="">Validación de requisitos - Revisor</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>Validación de requisitos - Revisor</option>
+                    </select>
+                  </div>
+                </div>
                 <p className="mt-3">Usuario Asignado</p>
-                <select name="" id="" className="form-control">
-                  <option value="">CGONZALEL</option>
-                </select>
+                <div className="form-group gov-co-form-group ml-2">
+                  <div className="gov-co-dropdown">
+                    <select
+                      id="selector-simple"
+                      className="selectpicker form-control"
+                      title="Escoger"
+                    >
+                      <option>CGONZALEZL</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -226,9 +257,17 @@ const RevisarSg = () => {
                             <p className="mt-3">
                               Tipo de solicitud de concesión*
                             </p>
-                            <select name="" id="" className="form-control">
-                              <option value="">Tipo de fuente</option>
-                            </select>
+                            <div className="form-group gov-co-form-group ml-2">
+                              <div className="gov-co-dropdown">
+                                <select
+                                  id="selector-simple"
+                                  className="selectpicker form-control"
+                                  title="Escoger"
+                                >
+                                  <option>Tipo de fuente</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="row">
@@ -238,26 +277,50 @@ const RevisarSg = () => {
                               <option value="">Superficial</option>
                             </select>
                             <p className="mt-2">Descripción de otra fuente</p>
-                            <input
-                              type="text"
-                              className="form-control"
-                              onKeyPress={(event) => {
-                                if (!/[a-zA-Z]/.test(event.key)) {
+                            <div className="form-group gov-co-form-group">
+                              <input
+                                type="text"
+                                className="form-control gov-co-form-control"
+                                onKeyPress={(event) => {
+                                  if (!/[a-zA-Z]/.test(event.key)) {
+                                    event.preventDefault();
+                                  }
+                                }}
+                                onPaste={(event) => {
                                   event.preventDefault();
-                                }
-                              }}
-                              onPaste={(event) => {
-                                event.preventDefault();
-                              }}
-                            />
+                                }}
+                              />
+                            </div>
                           </div>
                           <div className="col-md-6 col-lg-6 col-sm-12">
                             <p className="mt-3">Subcategoria de fuente*</p>
-                            <select name="" id="" className="form-control">
-                              <option value="">Caño</option>
-                            </select>
+
+                            <div className="form-group gov-co-form-group ml-2">
+                              <div className="gov-co-dropdown">
+                                <select
+                                  id="selector-simple"
+                                  className="selectpicker form-control"
+                                  title="Escoger"
+                                >
+                                  <option>Caño</option>
+                                </select>
+                              </div>
+                            </div>
                             <p className="mt-2">Nombre de la fuente</p>
-                            <input type="text" className="form-control" />
+                            <div className="form-group gov-co-form-group">
+                              <input
+                                type="text"
+                                className="form-control gov-co-form-control"
+                                onKeyPress={(event) => {
+                                  if (!/[a-zA-Z]/.test(event.key)) {
+                                    event.preventDefault();
+                                  }
+                                }}
+                                onPaste={(event) => {
+                                  event.preventDefault();
+                                }}
+                              />
+                            </div>
                           </div>
                         </div>
                         <div className="row">
@@ -265,64 +328,78 @@ const RevisarSg = () => {
                             <p className="mt-3">localización</p>
                           </div>
                           <div className="col-md-4 col-lg-4 col-sm-12">
-                            <input
-                              type="text"
-                              className="form-control"
-                              onKeyPress={(event) => {
-                                if (!/[a-zA-Z]/.test(event.key)) {
+                            <div className="form-group gov-co-form-group">
+                              <input
+                                type="text"
+                                className="form-control gov-co-form-control"
+                                onKeyPress={(event) => {
+                                  if (!/[a-zA-Z]/.test(event.key)) {
+                                    event.preventDefault();
+                                  }
+                                }}
+                                onPaste={(event) => {
                                   event.preventDefault();
-                                }
-                              }}
-                              onPaste={(event) => {
-                                event.preventDefault();
-                              }}
-                            />
+                                }}
+                              />
+                            </div>
                           </div>
                           <div className="col-md-4 col-lg-4 col-sm-12">
-                            <input
-                              type="text"
-                              className="form-control"
-                              onKeyPress={(event) => {
-                                if (!/[a-zA-Z]/.test(event.key)) {
+                            <div className="form-group gov-co-form-group">
+                              <input
+                                type="text"
+                                className="form-control gov-co-form-control"
+                                onKeyPress={(event) => {
+                                  if (!/[a-zA-Z]/.test(event.key)) {
+                                    event.preventDefault();
+                                  }
+                                }}
+                                onPaste={(event) => {
                                   event.preventDefault();
-                                }
-                              }}
-                              onPaste={(event) => {
-                                event.preventDefault();
-                              }}
-                            />
+                                }}
+                              />
+                            </div>
                           </div>
                           <div className="col-md-4 col-lg-4 col-sm-12">
-                            <input
-                              type="text"
-                              className="form-control"
-                              onKeyPress={(event) => {
-                                if (!/[a-zA-Z]/.test(event.key)) {
+                            <div className="form-group gov-co-form-group">
+                              <input
+                                type="text"
+                                className="form-control gov-co-form-control"
+                                onKeyPress={(event) => {
+                                  if (!/[a-zA-Z]/.test(event.key)) {
+                                    event.preventDefault();
+                                  }
+                                }}
+                                onPaste={(event) => {
                                   event.preventDefault();
-                                }
-                              }}
-                              onPaste={(event) => {
-                                event.preventDefault();
-                              }}
-                            />
+                                }}
+                              />
+                            </div>
                           </div>
                         </div>
                         <div className="row">
                           <div className="col-lg-12 col-sm-12 col-md-12">
                             <p>Descripción de la fuente</p>
-                            <textarea
-                              className="form-control"
-                              id="exampleFormControlTextarea1"
-                              rows={5}
-                            ></textarea>
+                            <div className="form-group gov-co-form-group">
+                              <textarea
+                                className="form-control ml-2"
+                                id="exampleFormControlTextarea1"
+                                rows={5}
+                              ></textarea>
+                            </div>
                             <p className="mt-3">
                               Autoridad ambiental que otorga la concesión
                             </p>
-                            <select name="" id="" className="form-control">
-                              <option value="">
-                                SDA - Distrital de Ambiente
-                              </option>
-                            </select>
+                            <div className="form-group gov-co-form-group ml-2">
+                              <div className="gov-co-dropdown">
+                                <select
+                                  id="selector-simple"
+                                  className="selectpicker form-control"
+                                  title="Escoger"
+                                >
+                                  <option>SDA - Distrital de Ambiente</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -514,11 +591,13 @@ const RevisarSg = () => {
                                   No
                                 </label>
                               </div>
-                              <textarea
-                                className="mt-3 form-control"
-                                id="exampleFormControlTextarea1"
-                                rows={5}
-                              ></textarea>
+                              <div className="form-group gov-co-form-group">
+                                <textarea
+                                  className="form-control ml-2"
+                                  id="exampleFormControlTextarea1"
+                                  rows={5}
+                                ></textarea>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -556,21 +635,31 @@ const RevisarSg = () => {
                         <div className="row">
                           <div className="col-lg-12 col-sm-12 col-md-12">
                             <p>Tipo de Notificación*</p>
-                            <select name="" id="" className="form-control">
-                              <option value="">
-                                Subsanación/Anulación/Desistimiento/Observación
-                                interna
-                              </option>
-                            </select>
+                            <div className="form-group gov-co-form-group ml-2">
+                              <div className="gov-co-dropdown">
+                                <select
+                                  id="selector-simple"
+                                  className="selectpicker form-control"
+                                  title="Escoger"
+                                >
+                                  <option>
+                                    Subsanación/Anulación/Desistimiento/Observación
+                                    interna
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="row mt-3">
                           <div className="col-md-12 col-lg-12 col-sm-12">
-                            <textarea
-                              className="mt-3 form-control"
-                              id="exampleFormControlTextarea1"
-                              rows={5}
-                            ></textarea>
+                            <div className="form-group gov-co-form-group">
+                              <textarea
+                                className="form-control ml-2"
+                                id="exampleFormControlTextarea1"
+                                rows={5}
+                              ></textarea>
+                            </div>
                           </div>
                         </div>
                         <div className="row mt-4">
@@ -709,11 +798,13 @@ const RevisarSg = () => {
                       >
                         <div className="row mt-3">
                           <div className="col-md-12 col-lg-12 col-sm-12">
-                            <textarea
-                              className="mt-3 form-control"
-                              id="exampleFormControlTextarea1"
-                              rows={5}
-                            ></textarea>
+                            <div className="form-group gov-co-form-group">
+                              <textarea
+                                className="form-control ml-2"
+                                id="exampleFormControlTextarea1"
+                                rows={5}
+                              ></textarea>
+                            </div>
                           </div>
                         </div>
                         <div className="row mt-4">
@@ -734,7 +825,7 @@ const RevisarSg = () => {
                                 float: "right",
                               }}
                             >
-                              Notificar{" "}
+                              Notificar
                             </button>
                           </div>
                         </div>

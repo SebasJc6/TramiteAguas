@@ -101,36 +101,40 @@ const SegundaU = () => {
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
-                <p>Número</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                <p>Número de radicado</p>
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Tipo trámite</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -162,35 +166,39 @@ const SegundaU = () => {
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2 ml-2">
               <div className="panel-search">
                 <p>Caudal diseño (L/S)</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-md-4 mt-2">
               <div className="panel-search">
                 <p>Caudal tratado (L/S)</p>
-                <input
-                  type="text"
-                  className="form-control"
-                  onKeyPress={(event) => {
-                    if (!/[a-zA-Z]/.test(event.key)) {
+                <div className="form-group gov-co-form-group">
+                  <input
+                    type="text"
+                    className="form-control gov-co-form-control"
+                    onKeyPress={(event) => {
+                      if (!/[a-zA-Z]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    onPaste={(event) => {
                       event.preventDefault();
-                    }
-                  }}
-                  onPaste={(event) => {
-                    event.preventDefault();
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -230,33 +238,37 @@ const SegundaU = () => {
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal de diseño (L/s)</p>
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12">
               <p>Caudal de tratado (L/s)</p>
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-4">
@@ -436,7 +448,20 @@ const SegundaU = () => {
             </div>
             <div className="col-lg-8 col-sm-12 col-md-8 mt-3">
               <p>Descripción de otro componente del sistema de tratamiento</p>
-              <input type="text" name="" id="" className="form-control" />
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
+                    event.preventDefault();
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-3">
@@ -444,32 +469,36 @@ const SegundaU = () => {
               <p>Número de usuarios</p>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[0-9]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[0-9]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row mt-2">
@@ -477,32 +506,36 @@ const SegundaU = () => {
               <p>Población beneficiada</p>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-12">
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="row">
@@ -564,7 +597,7 @@ const SegundaU = () => {
               <div id="accordion" className="mt-3">
                 <button
                   className=" button btn btn-default"
-                  style={{ backgroundColor: "#CBCBCB" }}
+                  style={{ backgroundColor: "#BABABA" }}
                 >
                   Adicionar
                 </button>
@@ -572,7 +605,7 @@ const SegundaU = () => {
               <div id="accordion" className="mt-3">
                 <button
                   className=" button btn btn-default"
-                  style={{ backgroundColor: "#CBCBCB" }}
+                  style={{ backgroundColor: "#BABABA" }}
                 >
                   ver archivo
                 </button>
@@ -580,7 +613,7 @@ const SegundaU = () => {
               <div id="accordion" className="mt-3">
                 <button
                   className=" button btn btn-default"
-                  style={{ backgroundColor: "#CBCBCB" }}
+                  style={{ backgroundColor: "#BABABA" }}
                 ></button>
               </div>
             </div>
@@ -589,7 +622,7 @@ const SegundaU = () => {
             <div className="col-lg-8 col-sm-12 col-md-8">
               <button
                 className="float-right button btn btn-default"
-                style={{ backgroundColor: "#CBCBCB" }}
+                style={{ backgroundColor: "#BABABA" }}
               >
                 Cargar archivo
               </button>
@@ -634,18 +667,20 @@ const SegundaU = () => {
           <div className="row">
             <div className="col-lg-4 col-sm-12 col-md-4">
               <p>Estado de la revisión </p>
-              <input
-                type="text"
-                className="form-control"
-                onKeyPress={(event) => {
-                  if (!/[a-zA-Z]/.test(event.key)) {
+              <div className="form-group gov-co-form-group">
+                <input
+                  type="text"
+                  className="form-control gov-co-form-control"
+                  onKeyPress={(event) => {
+                    if (!/[a-zA-Z]/.test(event.key)) {
+                      event.preventDefault();
+                    }
+                  }}
+                  onPaste={(event) => {
                     event.preventDefault();
-                  }
-                }}
-                onPaste={(event) => {
-                  event.preventDefault();
-                }}
-              />
+                  }}
+                />
+              </div>
             </div>
             <div className="col-lg-4 col-sm-12 col-md-4 text-center mt-5">
               <p>Documento pdf</p>
@@ -653,13 +688,13 @@ const SegundaU = () => {
             <div className="col-lg-8 col-md-8 col-sm-12 mt-2">
               <button
                 className="ml-4 mr-3 float-right button btn btn-default"
-                style={{ backgroundColor: "#CBCBCB" }}
+                style={{ backgroundColor: "#BABABA" }}
               >
                 Guardar
               </button>
               <button
                 className="float-right button btn btn-default"
-                style={{ backgroundColor: "#CBCBCB" }}
+                style={{ backgroundColor: "BABABA" }}
               >
                 Cancelar
               </button>

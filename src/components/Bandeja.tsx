@@ -28,7 +28,7 @@ const Bandeja = () => {
         <div className="row mt-2">
           <div className="col-lg-6 col-sm-12 col-md-6">
             <div className="info-secion">
-              <nav aria-label="breadcrumb" style={{ backgroundColor: "#fff" }}>
+              <nav aria-label="breadcrumb gov-co-breadcrumb" style={{ backgroundColor: "#fff" }}>
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item">
                     <a href="#" style={{ textDecoration: "none" }}>
@@ -130,23 +130,33 @@ const Bandeja = () => {
                     <p className="mt-4">Filtrar por:</p>
                     <div className="row">
                       <div className="col-lg-6 col-md-6 col-sm-12">
-                        <select name="" id="" className="form-control">
-                          <option value="">Escoger</option>
-                        </select>
+                        <div className="form-group gov-co-form-group ml-2">
+                          <div className="gov-co-dropdown">
+                            <select
+                              id="selector-simple"
+                              className="selectpicker form-control"
+                              title="Escoger"
+                            >
+                              <option>Seleccione</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                       <div className="col-md-6 col-lg-6 col-sm-12">
-                        <input
-                          type="text"
-                          className="form-control"
-                          onKeyPress={(event) => {
-                            if (!/[a-zA-Z]/.test(event.key)) {
+                        <div className="form-group gov-co-form-group">
+                          <input
+                            type="text"
+                            className="form-control gov-co-form-control"
+                            onKeyPress={(event) => {
+                              if (!/[a-zA-Z]/.test(event.key)) {
+                                event.preventDefault();
+                              }
+                            }}
+                            onPaste={(event) => {
                               event.preventDefault();
-                            }
-                          }}
-                          onPaste={(event) => {
-                            event.preventDefault();
-                          }}
-                        />
+                            }}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
